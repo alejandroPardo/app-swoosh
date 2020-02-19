@@ -47,7 +47,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5i9-J0-bTr" kind="show" id="l0P-qA-dAJ"/>
+                                    <segue destination="5i9-J0-bTr" kind="presentation" modalPresentationStyle="fullScreen" id="l0P-qA-dAJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rL8-Bg-wS3">
@@ -93,11 +93,11 @@
             <objects>
                 <viewController id="5i9-J0-bTr" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nrl-aD-2vE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="lan-hI-ocU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="DhN-OA-v0d">
                                 <rect key="frame" x="0.0" y="20" width="414" height="115"/>
@@ -156,16 +156,19 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpA-cs-Zhb" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="16" y="646" width="382" height="50"/>
+                                <rect key="frame" x="16" y="666" width="382" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pR3-3N-8zo"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="rTm-cp-HtA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="5i9-J0-bTr" eventType="touchUpInside" id="35t-EQ-2n6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5J-mk-k7C">
                                 <rect key="frame" x="16" y="16" width="29" height="24"/>
@@ -200,6 +203,9 @@
                         <viewLayoutGuide key="safeArea" id="SuF-e7-GBy"/>
                     </view>
                     <navigationItem key="navigationItem" id="TvJ-AS-Gfk"/>
+                    <connections>
+                        <segue destination="hF4-CW-tOf" kind="presentation" identifier="skillVCSegue" modalPresentationStyle="fullScreen" id="b4f-4W-crB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fa-He-LSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="brr-64-f79" userLabel="Exit" sceneMemberID="exit"/>
@@ -294,6 +300,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DgU-eO-NYy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WM8-rs-UTB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYr-rz-YIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
